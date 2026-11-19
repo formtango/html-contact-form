@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact form with FormTango</title>
+    <style>
+      body { font: 16px/1.5 system-ui, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 1rem; }
+      label { display: block; margin-bottom: 1rem; font-weight: 600; }
+      input, textarea { display: block; width: 100%; margin-top: 0.25rem; padding: 0.6rem; font: inherit; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+      button { padding: 0.7rem 1.2rem; font: inherit; font-weight: 600; color: #fff; background: #e8502a; border: 0; border-radius: 8px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Contact us</h1>
+    <!-- Replace YOUR_FORM_ID. That is the whole integration. -->
+    <form action="https://formtango.com/f/YOUR_FORM_ID" method="POST">
+      <label>Name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Message <textarea name="message" rows="5" required></textarea></label>
+      <!-- Spam trap: leave this hidden and empty -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
